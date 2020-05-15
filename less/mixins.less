@@ -1,0 +1,25 @@
+.flex(@justify:center, @direction:row){
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: center;
+}
+
+.custom-btn(@bg-color:#008080, @width:200px, @font-color:#0000){
+    margin:1%;
+    display: block;
+    background-color: @bg-color;
+    cursor: pointer;
+    width: @width;
+    height: 45px;
+    font-size: 1rem;
+    border-radius: 4px;
+    color:@font-color;
+    
+    
+    &:hover{
+      background-color:@font-color;
+      color:@bg-color;
+    }
+
+}

@@ -201,13 +201,15 @@ const artists = [
     }
 ]
 
+console.log(artists);
 // 🖌🖼 M V P 🖼🖌 //
 
 /* Task 1: Practice accessing data above by console.log-ing following items:
 
 (1) Name of the first artist in the array
 (2) Bio of the third artist in the array */
-
+const first= artists[0];
+console.log(first);
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */

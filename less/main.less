@@ -1,0 +1,99 @@
+.title-container{
+    margin: 1%;
+    padding: 2%;
+    .flex(@justify:center, @direction:column );
+    width:100%;
+    height: 900px;
+    background-image: url('../assets/home.png');
+
+    @media @mobile{
+        width:100%;
+        height: 100%;
+        padding: 20%;
+    }
+
+        h1{
+            font-size: 6rem;
+            font-weight: @bold;
+            text-align: center;
+            line-height: 7rem;
+            color: @white;
+
+            @media @mobile{
+                font-size: 2.5rem;
+                line-height: 3rem;
+            }
+        }
+
+        button{
+            .custom-btn(@bg-color:@white, @width:200px, @font-color:@darkgray);
+
+            @media @mobile{
+                .custom-btn(@bg-color:@white, @width:100px, @font-color:@darkgray);
+                height: 35px;
+                font-size: .8rem;
+            }
+        }
+
+
+        
+    }
+
+    .artists-container{
+       
+        border-top: 2px solid @lightgray;
+        margin: 1%;
+        padding: 2%;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 100%;
+        .artist{
+            
+            .flex(@justify:space-around, @direction:column );
+            width: 30%;
+            img{
+                width: 90%;
+                height: 90%;
+                border-radius: 8px;
+            }
+            a{
+                margin: 2%;
+                text-decoration: none;
+                color: @darkgray;
+                font-size: 1.5rem; 
+                @media @mobile{
+                    font-size: 1rem; 
+                   
+                }
+            }
+            .bio {
+                margin: 1%;
+                width: 122%;
+                text-align: center;
+                color: @darkgray;
+                font-size: 1rem; 
+
+                @media @mobile{
+                    font-size: .5rem; 
+                   
+                }
+            }
+
+            @media @mobile{
+                .flex(@justify:space-around, @direction:column );
+                width: 60%;
+                align-items: center;
+                margin: 3%;
+            }
+        }
+        @media @mobile{
+            .flex(@justify:space-around, @direction:column );
+            width: 100%;
+            align-items: center;
+        }
+    }
+
+
