@@ -228,13 +228,14 @@ console.log(artists[8].name);
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name){
-  id = artists.name;
-  name = artist[i].name;
+function getArtistByIndex(artists, id){
+  let temp = artists[id];
+  // name = artist[i].name;
   
-   return `The name at index ${this.id} is ${this.name}`
+   return `The name at index ${temp.id} is ${temp.name}`
   
   }
+  getArtistByIndex(artists, 1);
 
 /* Task 4: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -245,24 +246,36 @@ function getArtistByIndex(id, name){
  * it will remove Amedeo Modigliani from our dataset.
 */
 function removeArtist(artists, n) {
-  let index = artists.indexOf(n);
-  if (index > -1){
-    artists.splice(index,1)
-  }  
+  //let index = artists[n];
   
+  return artists.splice(n, 1);
     }
-  removeArtist(artists, 1);
+   
+   removeArtist(artists, 0)
   console.log(artists);
 
 
-/* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
+/* Task 5: Create a function called lotsOfArt() 
+-that takes artists as an argument and 
+returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
 
-    /* Code here */
-
-  }
-
+function lotsOfArt(artists){
+  //let i = artists.paintings;
+  //let name = artists.name.length;
+  const newA = [];
+  for( i = 0; i < artists.length; i++){
+  //console.log(artists[i].name);
+  
+    if (artists[i].paintings > 100){ /*this is just loggin one*/
+    newA.push(artists[i].name);
+    
+      } 
+   
+  } 
+  return newA
+    }
+  
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
@@ -273,12 +286,18 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
+me = [{"id": 26,
+"name": "Ana Rosa Lerma", 
+"years": "June 4th, 1993",
+"genre": "Web Design", 
+"nationality": "Mexican",
+"bio": "Add 1-2 sentences (or use lorem ipsum)"}]
+function addArtist(artists, me){
 
-    /* Code here */
-
-  }
-
+artists.push(me[0]);
+console.log(artists);
+}
+addArtist (artists, me)
 
 
 
